@@ -1,12 +1,12 @@
-﻿using BLAZORGalery.Data.Interfaces;
-using BLAZORGalery.Domain.Models;
+﻿using BLAZORGallery.Data.Interfaces;
+using BLAZORGallery.Domain.Models;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace BLAZORGalery.Data.Repositories
+namespace BLAZORGallery.Data.Repositories
 {
     public class ImageRepository : IImageRepository
     {

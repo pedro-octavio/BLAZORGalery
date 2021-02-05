@@ -1,8 +1,8 @@
-using BLAZORGalery.Data;
-using BLAZORGalery.Data.Interfaces;
-using BLAZORGalery.Data.Repositories;
-using BLAZORGalery.Domain.Interfaces;
-using BLAZORGalery.Domain.Services;
+using BLAZORGallery.Data;
+using BLAZORGallery.Data.Interfaces;
+using BLAZORGallery.Data.Repositories;
+using BLAZORGallery.Domain.Interfaces;
+using BLAZORGallery.Domain.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -10,7 +10,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
-namespace BLAZORGalery
+namespace BLAZORGallery
 {
     public class Startup
     {

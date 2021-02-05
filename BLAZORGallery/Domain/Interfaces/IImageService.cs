@@ -1,9 +1,9 @@
-﻿using BLAZORGalery.Domain.Models;
+﻿using BLAZORGallery.Domain.Models;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace BLAZORGalery.Domain.Interfaces
+namespace BLAZORGallery.Domain.Interfaces
 {
     public interface IImageService
     {

@@ -1,11 +1,11 @@
-﻿using BLAZORGalery.Data.Interfaces;
-using BLAZORGalery.Domain.Interfaces;
-using BLAZORGalery.Domain.Models;
+﻿using BLAZORGallery.Data.Interfaces;
+using BLAZORGallery.Domain.Interfaces;
+using BLAZORGallery.Domain.Models;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace BLAZORGalery.Domain.Services
+namespace BLAZORGallery.Domain.Services
 {
     public class ImageService : IImageService
     {

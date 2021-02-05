@@ -1,7 +1,7 @@
-﻿using BLAZORGalery.Domain.Models;
+﻿using BLAZORGallery.Domain.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace BLAZORGalery.Data.Configurations
+namespace BLAZORGallery.Data.Configurations
 {
     internal static class ImagesTable
     {

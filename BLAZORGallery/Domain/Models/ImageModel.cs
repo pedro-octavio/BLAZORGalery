@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace BLAZORGalery.Domain.Models
+namespace BLAZORGallery.Domain.Models
 {
     public class ImageModel
     {

@@ -1,9 +1,9 @@
-﻿using BLAZORGalery.Domain.Models;
+﻿using BLAZORGallery.Domain.Models;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace BLAZORGalery.Data.Interfaces
+namespace BLAZORGallery.Data.Interfaces
 {
     public interface IImageRepository
     {

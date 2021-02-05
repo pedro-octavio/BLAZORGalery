@@ -1,8 +1,8 @@
-﻿using BLAZORGalery.Data.Configurations;
-using BLAZORGalery.Domain.Models;
+﻿using BLAZORGallery.Data.Configurations;
+using BLAZORGallery.Domain.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace BLAZORGalery.Data
+namespace BLAZORGallery.Data
 {
     public class ApplicationDataContext : DbContext
     {

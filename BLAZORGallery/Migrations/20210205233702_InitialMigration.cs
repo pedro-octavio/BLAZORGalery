@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace BLAZORGalery.Migrations
+namespace BLAZORGallery.Migrations
 {
     public partial class InitialMigration : Migration
     {

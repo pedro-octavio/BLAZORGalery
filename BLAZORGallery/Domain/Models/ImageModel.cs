@@ -11,10 +11,9 @@ namespace BLAZORGallery.Domain.Models
             CreateDate = createDate;
         }
 
-        public ImageModel(string imageSRC)
+        public ImageModel()
         {
             Id = Guid.NewGuid().ToString().Replace("-", string.Empty).Substring(0, 10);
-            ImageSRC = imageSRC;
             CreateDate = DateTime.Now;
         }
 

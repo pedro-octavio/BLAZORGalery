@@ -1,3 +1,4 @@
+using Blazored.Modal;
 using BLAZORGallery.Data;
 using BLAZORGallery.Data.Interfaces;
 using BLAZORGallery.Data.Repositories;
@@ -25,6 +26,8 @@ namespace BLAZORGallery
             services.AddServerSideBlazor();
 
             services.AddDbContext<ApplicationDataContext>(x => x.UseSqlite(Configuration.GetConnectionString("BLAZORGaleryDB")));
+
+            services.AddBlazoredModal();
 
             services.AddScoped<IImageService, ImageService>();
             services.AddScoped<IImageRepository, ImageRepository>();

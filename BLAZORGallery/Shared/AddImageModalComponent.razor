@@ -1,0 +1,32 @@
+﻿@using BLAZORGallery.Domain.Interfaces
+@using BLAZORGallery.Domain.Models
+
+@inject IImageService imageService
+
+<EditForm Model="@image" OnValidSubmit="@HandleValidSubmit">
+
+    <div class="form-group">
+
+        <label for="ImageSRC">Imagem</label>
+        <InputText id="ImageSRC" @bind-Value="image.ImageSRC" class="form-control" />
+
+    </div>
+
+    <button type="submit" class="btn btn-primary w-100 mt-5">Enviar</button>
+
+</EditForm>
+
+@code {
+    [CascadingParameter] BlazoredModalInstance ModalInstance { get; set; }
+
+    private ImageModel image = new ImageModel();
+}
+
+@functions{
+    private async Task HandleValidSubmit()
+    {
+        await imageService.AddAsync(image);
+
+        await ModalInstance.CloseAsync(ModalResult.Ok("dsdsdsd"));
+    }
+}

@@ -1,0 +1,70 @@
+﻿@using BLAZORGallery.Domain.Interfaces
+@using BLAZORGallery.Domain.Models
+
+@inject NavigationManager uriHelper
+@inject IImageService imageService
+
+<section>
+
+    <div class="text-center">
+
+        <button @onclick="@ShowModal" class="btn btn-success w-25">Add Image</button>
+
+    </div>
+
+    @if (images != null)
+    {
+
+        <ul class="image-grid">
+
+            @foreach (var image in images)
+            {
+
+                <li>
+
+                    <img src=@image.ImageSRC class="w-25 image">
+
+                </li>
+
+            }
+
+        </ul>
+
+    }
+    else
+    {
+        <p class="text-center">Not images added</p>
+    }
+
+</section>
+
+@code {
+    [CascadingParameter] public IModalService Modal { get; set; }
+}
+
+@functions {
+    private IEnumerable<ImageModel> images;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await base.OnInitializedAsync();
+
+        images = await imageService.GetAllAsync(null);
+    }
+
+    async Task ShowModal()
+    {
+        var formModal = Modal.Show<AddImageModalComponent>();
+
+        var addResult = await formModal.Result;
+
+        if (addResult.Cancelled)
+        {
+
+        }
+        else
+        {
+            uriHelper.NavigateTo(uriHelper.Uri, forceLoad: true);
+        }
+    }
+}

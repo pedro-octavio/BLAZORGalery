@@ -4,6 +4,7 @@ using BLAZORGallery.Data.Interfaces;
 using BLAZORGallery.Data.Repositories;
 using BLAZORGallery.Domain.Interfaces;
 using BLAZORGallery.Domain.Services;
+using BLAZORGallery.IOC;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -29,8 +30,7 @@ namespace BLAZORGallery
 
             services.AddBlazoredModal();
 
-            services.AddScoped<IImageService, ImageService>();
-            services.AddScoped<IImageRepository, ImageRepository>();
+            ConfigurationIOC.ResolveDependencies(services);
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
